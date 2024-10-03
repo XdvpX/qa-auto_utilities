@@ -1,0 +1,2 @@
+INVALID_USER_NAME = 'abc@yahoo.com'
+INVALID_PASSWORD = 'abc@123'
