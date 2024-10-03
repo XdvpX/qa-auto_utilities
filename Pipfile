@@ -1,0 +1,24 @@
+[[source]]
+name = "nexus"
+url = "https://pypi.org/simple/"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+requests = "*"
+selenium = "==4.9.1"
+pytest = "==7.1.3"
+pytest-xdist = "*"
+pytest-rerunfailures = "*"
+requests-oauthlib = "*"
+boto3 = "==1.18.46"
+cx-oracle = "*"
+PyMySQL = "*"
+pytz = "*"
+pandas = "*"
+psycopg_pool = "*"
+pymysql-pool = "*"
+
+[requires]
+python_version = "3.8"
