@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 class CustomWebDriverManager:
@@ -46,7 +47,7 @@ class CustomWebDriverManager:
                     options=cls.driver_options
                 )
             else:
-                cls.active_driver = webdriver.Chrome(service=Service('/Users/dvpx/qa-auto_utilities/chromedriver'),
+                cls.active_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),
                                                      options=cls.driver_options)
         except Exception as e:
             raise Exception(f"Failed to initialize WebDriver for {browser_type}: {e}")
