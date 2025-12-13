@@ -19,6 +19,7 @@ pytz = "*"
 pandas = "*"
 psycopg_pool = "*"
 pymysql-pool = "*"
+pytest-bdd = "*"
 
 [requires]
 python_version = "3.8"

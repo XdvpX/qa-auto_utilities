@@ -7,6 +7,10 @@ from auto_utilities.webdriver_utility import CustomWebDriverManager
 
 logger = logging.getLogger(__name__)
 
+pytest_plugins = [
+    "Feature.facebook.facebook_login_steps"
+]
+
 
 @pytest.fixture(autouse=True)
 def driver_init():
@@ -30,4 +34,8 @@ def pytest_runtest_makereport(item):
     if report.when == "call":
         if report.failed:
             logger.error(f"Test {item.name} failed!")
-            
+
+
+@pytest.fixture
+def browser():
+    return CustomWebDriverManager.get_active_driver()
